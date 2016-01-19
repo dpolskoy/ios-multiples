@@ -39,13 +39,13 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What multiple to add by?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rg5-Gy-suj" userLabel="multipleTxt">
-                                <rect key="frame" x="187" y="150" width="225" height="45"/>
+                                <rect key="frame" x="174.5" y="140" width="250" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="ctv-jc-mWR"/>
-                                    <constraint firstAttribute="width" constant="225" id="rYo-av-Lk0"/>
+                                    <constraint firstAttribute="height" constant="55" id="ctv-jc-mWR"/>
+                                    <constraint firstAttribute="width" constant="250" id="rYo-av-Lk0"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Add to add!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGa-z3-RJD" userLabel="infoLbl">
                                 <rect key="frame" x="30" y="111" width="540" height="88.5"/>
@@ -57,7 +57,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MiA-Wx-k6D" userLabel="calculationLbl">
-                                <rect key="frame" x="157.5" y="42" width="285" height="68"/>
+                                <rect key="frame" x="157" y="42" width="285" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68" id="BYq-id-mlE"/>
                                     <constraint firstAttribute="width" constant="285" id="frG-kE-sP3"/>

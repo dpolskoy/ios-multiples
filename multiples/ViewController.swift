@@ -23,9 +23,13 @@ class ViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
 		
-		infoLbl.adjustsFontSizeToFitWidth = true
+		// Add button "Done" to keyborad for "multipleTxt" to hide it
+		addKeyboardToolbar()
+		
+		// And hide keyboard on press outside of it
+		let tap = UITapGestureRecognizer(target: self, action: "donePressed")
+		view.addGestureRecognizer(tap)
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -34,9 +38,7 @@ class ViewController: UIViewController {
 	}
 
 	@IBAction func onPlayPressed(sender: UIButton) {
-		
 		if let tmpMultiple = Int(multipleTxt.text!) {
-		
 			playBtn.hidden = true
 			logoImg.hidden = true
 			multipleTxt.hidden = true
@@ -75,10 +77,28 @@ class ViewController: UIViewController {
 		multipleTxt.text = ""
 		
 		addBtn.hidden = true
-		
 		calculationLbl.hidden = true
 		
 		currentResult = 0
+	}
+	
+	private func addKeyboardToolbar(){
+		let numberToolbar = UIToolbar()
+		
+		numberToolbar.barStyle = UIBarStyle.Default
+		//numberToolbar.barStyle = .BlackTranslucent
+		//numberToolbar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+		let spaceHolder = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: self, action: nil)
+		let doneButton = UIBarButtonItem(title: "Done", style: .Done, target: self, action: "donePressed")
+		numberToolbar.setItems([spaceHolder, doneButton], animated: true)
+		numberToolbar.userInteractionEnabled = true
+		
+		numberToolbar.sizeToFit()
+		multipleTxt.inputAccessoryView = numberToolbar
+	}
+	
+	func donePressed() {
+		view.endEditing(true)
 	}
 }
 
