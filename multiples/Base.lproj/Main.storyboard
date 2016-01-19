@@ -39,7 +39,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What multiple to add by?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rg5-Gy-suj" userLabel="multipleTxt">
-                                <rect key="frame" x="187.5" y="150" width="225" height="45"/>
+                                <rect key="frame" x="187" y="150" width="225" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="ctv-jc-mWR"/>
                                     <constraint firstAttribute="width" constant="225" id="rYo-av-Lk0"/>
@@ -47,6 +47,25 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Add to add!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGa-z3-RJD" userLabel="infoLbl">
+                                <rect key="frame" x="30" y="111" width="540" height="88.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KGa-z3-RJD" secondAttribute="height" multiplier="61:10" id="Gz4-0J-0qS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="31"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MiA-Wx-k6D" userLabel="calculationLbl">
+                                <rect key="frame" x="157.5" y="42" width="285" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="BYq-id-mlE"/>
+                                    <constraint firstAttribute="width" constant="285" id="frG-kE-sP3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="360-KC-C2J" userLabel="addBtn">
                                 <rect key="frame" x="150" y="399" width="300" height="141"/>
                                 <constraints>
@@ -57,15 +76,6 @@
                                     <action selector="onAddPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jFd-5g-SG0"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Add to add!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGa-z3-RJD" userLabel="infoLbl">
-                                <rect key="frame" x="30" y="111" width="540" height="88.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="KGa-z3-RJD" secondAttribute="height" multiplier="61:10" id="Gz4-0J-0qS"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="31"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -83,14 +93,17 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="00b-GM-FHi" secondAttribute="bottom" id="UoC-hB-gUx"/>
                             <constraint firstItem="00b-GM-FHi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VEl-PY-alD"/>
                             <constraint firstItem="KGa-z3-RJD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="91" id="YNp-7A-mpo"/>
+                            <constraint firstItem="Ulk-fe-xc1" firstAttribute="top" secondItem="MiA-Wx-k6D" secondAttribute="bottom" constant="120" id="bwJ-cI-s0E"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="360-KC-C2J" secondAttribute="bottom" constant="60" id="fcP-AK-Gwv"/>
                             <constraint firstItem="KGa-z3-RJD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.9" id="gJi-p7-NbJ"/>
+                            <constraint firstItem="MiA-Wx-k6D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="phI-h2-FIF"/>
                             <constraint firstItem="Ulk-fe-xc1" firstAttribute="top" secondItem="Rg5-Gy-suj" secondAttribute="bottom" constant="35" id="qJN-uU-fLt"/>
                             <constraint firstItem="00b-GM-FHi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zcB-Dk-599"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="addBtn" destination="360-KC-C2J" id="7Ak-SF-c51"/>
+                        <outlet property="calculationLbl" destination="MiA-Wx-k6D" id="eyd-f3-sOQ"/>
                         <outlet property="infoLbl" destination="KGa-z3-RJD" id="rii-UF-9y8"/>
                         <outlet property="logoImg" destination="5UT-bI-K8l" id="Tud-du-qaD"/>
                         <outlet property="multipleTxt" destination="Rg5-Gy-suj" id="zd3-9q-y6f"/>
