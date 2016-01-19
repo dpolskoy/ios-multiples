@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,41 +22,101 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="00b-GM-FHi">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imc-qX-sdk">
-                                <rect key="frame" x="173" y="366" width="254" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="PBg-4B-EQv"/>
-                                    <constraint firstAttribute="width" constant="254" id="pIR-Y9-mVu"/>
-                                </constraints>
-                                <state key="normal" image="playBtn"/>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="5UT-bI-K8l">
-                                <rect key="frame" x="148.5" y="28" width="303" height="83"/>
+                                <rect key="frame" x="60" y="40" width="480" height="131.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="303" id="SgN-KZ-Gvs"/>
-                                    <constraint firstAttribute="height" constant="83" id="X2E-it-0NX"/>
+                                    <constraint firstAttribute="width" secondItem="5UT-bI-K8l" secondAttribute="height" multiplier="303:83" id="qrA-sS-oTG"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulk-fe-xc1" userLabel="playBtn">
+                                <rect key="frame" x="90" y="230" width="420" height="330"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ulk-fe-xc1" secondAttribute="height" multiplier="127:100" id="5BF-u5-D8J"/>
+                                </constraints>
+                                <state key="normal" image="playBtn"/>
+                                <connections>
+                                    <action selector="onPlayPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KQW-86-Kc1"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What multiple to add by?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rg5-Gy-suj" userLabel="multipleTxt">
+                                <rect key="frame" x="187" y="150" width="225" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="ctv-jc-mWR"/>
+                                    <constraint firstAttribute="width" constant="225" id="rYo-av-Lk0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Add to add!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGa-z3-RJD" userLabel="infoLbl">
+                                <rect key="frame" x="30" y="111" width="540" height="88.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KGa-z3-RJD" secondAttribute="height" multiplier="61:10" id="Gz4-0J-0qS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="31"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MiA-Wx-k6D" userLabel="calculationLbl">
+                                <rect key="frame" x="157.5" y="42" width="285" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="BYq-id-mlE"/>
+                                    <constraint firstAttribute="width" constant="285" id="frG-kE-sP3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="360-KC-C2J" userLabel="addBtn">
+                                <rect key="frame" x="150" y="399" width="300" height="141"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="360-KC-C2J" secondAttribute="height" multiplier="149:70" id="ENA-Kg-f5D"/>
+                                </constraints>
+                                <state key="normal" image="addBtn"/>
+                                <connections>
+                                    <action selector="onAddPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jFd-5g-SG0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="00b-GM-FHi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="N1X-A9-JkY"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="00b-GM-FHi" secondAttribute="bottom" id="PqQ-qs-t2Y"/>
-                            <constraint firstItem="Imc-qX-sdk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ue6-4z-0I1"/>
-                            <constraint firstItem="00b-GM-FHi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Y9V-tb-mnO"/>
-                            <constraint firstItem="5UT-bI-K8l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gb5-jo-XPI"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Imc-qX-sdk" secondAttribute="bottom" constant="34" id="jvF-D4-Wu5"/>
-                            <constraint firstAttribute="trailing" secondItem="00b-GM-FHi" secondAttribute="trailing" id="qaH-CW-LJj"/>
-                            <constraint firstItem="5UT-bI-K8l" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="zGN-x8-qoh"/>
+                            <constraint firstItem="5UT-bI-K8l" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="4UK-yv-Ex2"/>
+                            <constraint firstItem="KGa-z3-RJD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.1" id="4sM-Ug-tw5"/>
+                            <constraint firstItem="Ulk-fe-xc1" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.7" id="4zz-Px-jhM"/>
+                            <constraint firstAttribute="trailing" secondItem="00b-GM-FHi" secondAttribute="trailing" id="8cB-gL-xkI"/>
+                            <constraint firstItem="360-KC-C2J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.5" id="EzT-PO-1yq"/>
+                            <constraint firstItem="5UT-bI-K8l" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.8" id="FbW-Ti-CPL"/>
+                            <constraint firstItem="Rg5-Gy-suj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H5S-IZ-H1N"/>
+                            <constraint firstItem="Ulk-fe-xc1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.3" id="THx-pi-Y7d"/>
+                            <constraint firstItem="360-KC-C2J" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.5" id="TRc-MP-pH7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ulk-fe-xc1" secondAttribute="bottom" constant="40" id="UfV-H0-DJA"/>
+                            <constraint firstItem="5UT-bI-K8l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.2" id="Uli-Wl-5Pb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="00b-GM-FHi" secondAttribute="bottom" id="UoC-hB-gUx"/>
+                            <constraint firstItem="00b-GM-FHi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VEl-PY-alD"/>
+                            <constraint firstItem="KGa-z3-RJD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="91" id="YNp-7A-mpo"/>
+                            <constraint firstItem="Ulk-fe-xc1" firstAttribute="top" secondItem="MiA-Wx-k6D" secondAttribute="bottom" constant="120" id="bwJ-cI-s0E"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="360-KC-C2J" secondAttribute="bottom" constant="60" id="fcP-AK-Gwv"/>
+                            <constraint firstItem="KGa-z3-RJD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.9" id="gJi-p7-NbJ"/>
+                            <constraint firstItem="MiA-Wx-k6D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="phI-h2-FIF"/>
+                            <constraint firstItem="Ulk-fe-xc1" firstAttribute="top" secondItem="Rg5-Gy-suj" secondAttribute="bottom" constant="35" id="qJN-uU-fLt"/>
+                            <constraint firstItem="00b-GM-FHi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zcB-Dk-599"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addBtn" destination="360-KC-C2J" id="7Ak-SF-c51"/>
+                        <outlet property="calculationLbl" destination="MiA-Wx-k6D" id="eyd-f3-sOQ"/>
+                        <outlet property="infoLbl" destination="KGa-z3-RJD" id="rii-UF-9y8"/>
+                        <outlet property="logoImg" destination="5UT-bI-K8l" id="Tud-du-qaD"/>
+                        <outlet property="multipleTxt" destination="Rg5-Gy-suj" id="zd3-9q-y6f"/>
+                        <outlet property="playBtn" destination="Ulk-fe-xc1" id="aDF-7x-z7a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="325" y="375"/>
+            <point key="canvasLocation" x="599" y="380"/>
         </scene>
     </scenes>
     <resources>
+        <image name="addBtn" width="200" height="100"/>
         <image name="bg" width="1667" height="1667"/>
         <image name="logo" width="533" height="124"/>
         <image name="playBtn" width="200" height="200"/>
