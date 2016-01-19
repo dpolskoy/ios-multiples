@@ -51,10 +51,20 @@
                                 </constraints>
                                 <state key="normal" image="addBtn"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Add to add!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGa-z3-RJD" userLabel="infoLbl">
+                                <rect key="frame" x="30" y="111" width="540" height="88.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KGa-z3-RJD" secondAttribute="height" multiplier="61:10" id="Gz4-0J-0qS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="31"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="5UT-bI-K8l" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="4UK-yv-Ex2"/>
+                            <constraint firstItem="KGa-z3-RJD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.1" id="4sM-Ug-tw5"/>
                             <constraint firstItem="Ulk-fe-xc1" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.7" id="4zz-Px-jhM"/>
                             <constraint firstAttribute="trailing" secondItem="00b-GM-FHi" secondAttribute="trailing" id="8cB-gL-xkI"/>
                             <constraint firstItem="360-KC-C2J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.5" id="EzT-PO-1yq"/>
@@ -66,7 +76,9 @@
                             <constraint firstItem="5UT-bI-K8l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.2" id="Uli-Wl-5Pb"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="00b-GM-FHi" secondAttribute="bottom" id="UoC-hB-gUx"/>
                             <constraint firstItem="00b-GM-FHi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VEl-PY-alD"/>
+                            <constraint firstItem="KGa-z3-RJD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="91" id="YNp-7A-mpo"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="360-KC-C2J" secondAttribute="bottom" constant="60" id="fcP-AK-Gwv"/>
+                            <constraint firstItem="KGa-z3-RJD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.9" id="gJi-p7-NbJ"/>
                             <constraint firstItem="Ulk-fe-xc1" firstAttribute="top" secondItem="Rg5-Gy-suj" secondAttribute="bottom" constant="40" id="qJN-uU-fLt"/>
                             <constraint firstItem="00b-GM-FHi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zcB-Dk-599"/>
                         </constraints>
@@ -74,7 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="490" y="366"/>
+            <point key="canvasLocation" x="599" y="380"/>
         </scene>
     </scenes>
     <resources>
