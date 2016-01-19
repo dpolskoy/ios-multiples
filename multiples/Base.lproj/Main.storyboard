@@ -22,13 +22,20 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="00b-GM-FHi">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="5UT-bI-K8l">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="5UT-bI-K8l">
                                 <rect key="frame" x="60" y="28" width="480" height="131.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="5UT-bI-K8l" secondAttribute="height" multiplier="303:83" id="qrA-sS-oTG"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What multiple to add by?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rg5-Gy-suj">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulk-fe-xc1" userLabel="playBtn">
+                                <rect key="frame" x="90" y="235" width="420" height="330"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ulk-fe-xc1" secondAttribute="height" multiplier="127:100" id="5BF-u5-D8J"/>
+                                </constraints>
+                                <state key="normal" image="playBtn"/>
+                            </button>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What multiple to add by?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rg5-Gy-suj">
                                 <rect key="frame" x="187.5" y="150" width="225" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="ctv-jc-mWR"/>
@@ -37,12 +44,12 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulk-fe-xc1">
-                                <rect key="frame" x="90" y="235" width="420" height="330"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="360-KC-C2J" userLabel="addBtn">
+                                <rect key="frame" x="150" y="399" width="300" height="141"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Ulk-fe-xc1" secondAttribute="height" multiplier="127:100" id="5BF-u5-D8J"/>
+                                    <constraint firstAttribute="width" secondItem="360-KC-C2J" secondAttribute="height" multiplier="149:70" id="ENA-Kg-f5D"/>
                                 </constraints>
-                                <state key="normal" image="playBtn"/>
+                                <state key="normal" image="addBtn"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -50,13 +57,16 @@
                             <constraint firstItem="5UT-bI-K8l" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="4UK-yv-Ex2"/>
                             <constraint firstItem="Ulk-fe-xc1" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.7" id="4zz-Px-jhM"/>
                             <constraint firstAttribute="trailing" secondItem="00b-GM-FHi" secondAttribute="trailing" id="8cB-gL-xkI"/>
+                            <constraint firstItem="360-KC-C2J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.5" id="EzT-PO-1yq"/>
                             <constraint firstItem="5UT-bI-K8l" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.8" id="FbW-Ti-CPL"/>
                             <constraint firstItem="Rg5-Gy-suj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H5S-IZ-H1N"/>
                             <constraint firstItem="Ulk-fe-xc1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.3" id="THx-pi-Y7d"/>
+                            <constraint firstItem="360-KC-C2J" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.5" id="TRc-MP-pH7"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ulk-fe-xc1" secondAttribute="bottom" constant="35" id="UfV-H0-DJA"/>
                             <constraint firstItem="5UT-bI-K8l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.2" id="Uli-Wl-5Pb"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="00b-GM-FHi" secondAttribute="bottom" id="UoC-hB-gUx"/>
                             <constraint firstItem="00b-GM-FHi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VEl-PY-alD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="360-KC-C2J" secondAttribute="bottom" constant="60" id="fcP-AK-Gwv"/>
                             <constraint firstItem="Ulk-fe-xc1" firstAttribute="top" secondItem="Rg5-Gy-suj" secondAttribute="bottom" constant="40" id="qJN-uU-fLt"/>
                             <constraint firstItem="00b-GM-FHi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zcB-Dk-599"/>
                         </constraints>
@@ -68,6 +78,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="addBtn" width="200" height="100"/>
         <image name="bg" width="1667" height="1667"/>
         <image name="logo" width="533" height="124"/>
         <image name="playBtn" width="200" height="200"/>
